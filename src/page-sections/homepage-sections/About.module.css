@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+
+
+.about-section{
+    width: 100%;
+    padding-top: 1rem;
+    background: #ffffff;
+}
+
+.about-section .text-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 700px;
+    flex: 1;
+}
+
+.about-section .text-div p {
+    font-family: "Bai Jamjuree";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: var(--line-height);
+    text-align: left;
+    hyphens: auto;
+    color: #1C1E53;
+}
+
+.about-section .text-div h1{
+    font-family: "Space Grotesk";
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: left;
+    color: #282938;
+    hyphens: auto;
+}
+
+.about-section .text-div h1 span {
+    color: #5E3BEE;
+}
+
+.about-section .img-div {
+    position: relative;
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    max-width: 592px;
+    max-height: 576px;
+    padding: 0 1rem;
+    flex: 1;
+}
+
+@media (max-width: 1024px) {
+    .about-section .text-div h1{
+        font-size: 36px;
+    }
+
+    .about-section .text-div p{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .about-section > div {
+        flex-direction: column;
+    }
+
+    .about-section .text-div{
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .about-section .text-div p, .about-section .text-div h1{
+        text-align: center;
+        align-self: center;
+    }
+
+    .about-section .text-div h1{
+        font-size: 28px;
+    }
+}

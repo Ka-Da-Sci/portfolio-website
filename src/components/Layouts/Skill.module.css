@@ -1,0 +1,42 @@
+.skill{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #F5FCFF;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.skill .image-container{
+    display: flex;
+    padding: 0.75rem;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    max-width: 80px;
+    max-height: 80px;
+    box-shadow: 0px 0px 16px 0px #0000001A;
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.skill h1 {
+    font-family: 'Bai Jamjuree';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: var(--line-height);
+    text-align: left;
+    color: #282938;
+}
+
+.skill p {
+    font-family: Bai Jamjuree;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: var(--line-height);
+    text-align: left;
+    color: #1C1E53;
+}

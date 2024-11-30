@@ -1,0 +1,118 @@
+.skills-section {
+  width: 100%;
+  background: #ffffff;
+}
+
+.skills-section > div {
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.skills-section .skills-top {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.skills-section .skills-top p {
+  font-family: "Bai Jamjuree";
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: var(--line-height);
+  text-align: left;
+  hyphens: auto;
+  color: #282938;
+}
+
+.skills-section .skills-top h1 {
+  font-family: "Space Grotesk";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: left;
+  color: #282938;
+  hyphens: auto;
+}
+
+.skills-section .skills-bottom {
+  align-self: flex-start;
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .skills-section .skills-top h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-section .skills-top {
+    align-self: center;
+    align-items: center;
+  }
+
+  .skills-section .skills-bottom > li {
+    align-self: flex-start;
+    padding: 0.5rem;
+  }
+
+  .skills-section .skills-bottom > li > div {
+    max-width: 65px;
+    max-height: 65px;
+  }
+
+  .skills-section .skills-bottom > li h1 {
+    font-size: 20px;
+  }
+
+  .skills-section .skills-bottom > li p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .skills-section .skills-bottom {
+    flex-direction: column;
+  }
+
+  .skills-section > div {
+    align-items: center;
+  }
+
+  .skills-section .skills-bottom {
+    align-self: center;
+    align-items: center;
+  }
+
+  .skills-section .skills-bottom > li {
+    align-self: center;
+  }
+
+  .skills-section .skills-top h1{
+        font-size: 28px;
+    }
+
+  .skills-section .skills-top p,
+  .skills-section .skills-top h1 {
+    text-align: center;
+  }
+
+  .skills-section .skills-bottom > li {
+    align-items: center;
+  }
+
+  .skills-section .skills-bottom > li h1 {
+    text-align: center;
+  }
+
+  .skills-section .skills-bottom > li p {
+    text-align: center;
+  }
+}

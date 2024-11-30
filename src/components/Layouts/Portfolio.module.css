@@ -1,0 +1,74 @@
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #FFFFFF;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    box-shadow: 0px 4.76px 14.27px 0px #00000026;
+    border-radius: 8px;
+}
+
+.portfolio .image-container{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    max-width: 500px;
+    max-height: 360px;
+    border-radius: 8px;
+}
+
+.portfolio .image-container img{
+    border-radius: 8px 8px 0 0;
+}
+
+.portfolio span{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.portfolio span a{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    width: max-content;
+    max-width: 100px;
+    border-bottom: 1.19px solid #5E3BEE;
+}
+
+.portfolio span a p{
+    color: #000000;
+    font-family: Roboto;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: var(--line-height);
+    text-align: left; 
+}
+
+.portfolio span a img{
+    width: 14.27px;
+    height: 14.27px;
+}
+
+.portfolio h1 {
+    font-family: 'Bai Jamjuree';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: var(--line-height);
+    text-align: left;
+    color: #282938;
+}
+
+.portfolio p {
+    font-family: Bai Jamjuree;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: var(--line-height);
+    text-align: left;
+    color: #1C1E53;
+}

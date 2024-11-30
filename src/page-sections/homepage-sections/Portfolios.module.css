@@ -1,0 +1,124 @@
+.portfolios-section {
+    width: 100%;
+    background: #ffffff;
+}
+
+.portfolios-section > div {
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.portfolios-section .portfolios-top{
+    display: flex;
+    align-self: flex-start;
+    gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portfolios-section .portfolios-top h1{
+    font-family: "Space Grotesk";
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: left;
+    color: #282938;
+    hyphens: auto;
+}
+
+.portfolios-section .portfolios-bottom{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-self: self-end;
+    margin-top: -1rem;
+    
+}
+
+.portfolios-section .portfolios-bottom img{
+    width: 30.63px;
+    height: 30.39px;
+    max-width: 30.63px;
+    max-height: 30.39px;
+    cursor: pointer;
+    
+}
+
+.portfolios-section .portfolios-bottom span:nth-of-type(2) img{
+    transform: scale(-1);
+}
+
+.portfolios-section .portfolios-middle{
+    list-style: none;
+    align-self: flex-start;
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+@media (max-width: 1024px) {
+    .portfolios-section .portfolios-top h1 {
+      font-size: 36px;
+    }
+  }
+
+@media (max-width: 768px){
+
+    .portfolios-section .portfolios-bottom{
+        align-self: flex-end;
+    }
+
+    .portfolios-section .portfolios-top{
+        justify-content: center;
+    }
+
+    .portfolios-section .portfolios-top h1{
+        text-align: center;
+    }
+
+    .portfolios-section .portfolios-middle > li h1{
+        font-size: 20px;
+        padding: 0;
+        hyphens: auto;
+    }
+
+    .portfolios-section .portfolios-middle > li p{
+        font-size: 15px;
+        padding: 0;
+        hyphens: auto;
+    }
+}
+
+@media (max-width: 640px){
+    .portfolios-section .portfolios-top h1{
+        font-size: 28px;
+    }
+
+    .portfolios-section > div{
+        align-items: center;
+    }
+
+    .portfolios-section .portfolios-bottom img{
+        height: 25px;
+        width: 25px;
+
+    }
+    .portfolios-section .portfolios-middle > li{
+        align-items: center;
+    }
+
+    .portfolios-section .portfolios-middle > li h1{
+        text-align: center;
+    }
+
+    .portfolios-section .portfolios-middle > li p{
+        text-align: center;
+    }
+}
+
