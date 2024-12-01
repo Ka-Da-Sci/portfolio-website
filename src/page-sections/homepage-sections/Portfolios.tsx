@@ -104,26 +104,20 @@ const dummyPortfoliosData = [
 ];
 
 const Portfolios = () => {
-  const [portfoliosData, setportfoliosData] = useState(dummyPortfoliosData)
+  const [portfoliosData, setPortfoliosData] = useState(dummyPortfoliosData)
   const [count, setCount] = useState(0);
   const carouselLeftBtn = useRef<HTMLSpanElement | null>(null);
   const carouselRightBtn = useRef<HTMLSpanElement | null>(null);
 
   const handleLeftCarouselBtnClick = () => {
     carouselCtrl(carouselLeftBtn.current!.id);
-    // return (Event) => {
-    //   Event.preventDefault();
-    // }
   }
   const handleRightCarouselBtnClick = () => {
     carouselCtrl(carouselRightBtn.current!.id);
-    // return (Event) => {
-    //   Event.preventDefault();
-    // }
   }
   const carouselCtrl = (btnId: string) => {
     console.log(btnId);
-    setportfoliosData((prevState) => {
+    setPortfoliosData((prevState) => {
       if (prevState.length === 0) return prevState; // Return unchanged state if empty
   
       if (btnId === 'leftCarouselBtn') {
@@ -141,8 +135,6 @@ const Portfolios = () => {
       return prevState; // Fallback in case of no matching id
     });
   };  
-  // carouselCtrl();
-  
 
   useEffect(() => {
     const updateCount = () => {
