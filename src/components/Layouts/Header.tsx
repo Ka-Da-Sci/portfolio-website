@@ -1,15 +1,15 @@
 import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../../assets/images/logo.jpg';
+import logo from '../../assets/images/logo-trans.svg';
 import classes from './Header.module.css';
-import ImageCard from './Logo';
+import Logo from './Logo';
 
 const Header: FC = () => {
 
     return (
         <div id='header' className={classes.header}>
             <NavLink to='/'>
-                <ImageCard imageUrl={logo}/>
+                <Logo imageUrl={logo}/>
             </NavLink>
             <nav className={classes.nav}>
 

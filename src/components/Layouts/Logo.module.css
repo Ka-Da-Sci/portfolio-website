@@ -1,17 +1,25 @@
 .logo {
-    height: 27.7px;
-    width: 35px;
-    will-change: filter;
-    transition: filter 300ms;
+  height: 40px;
+  width: 40px;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+
+@media (max-width: 768px) {
+  .logo {
+    height: 30px;
+    width: 30px;
   }
-  
-  .logo img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-  }
-  
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
+}

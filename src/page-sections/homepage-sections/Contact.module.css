@@ -1,0 +1,152 @@
+.contact-section{
+    width: 100%;
+    padding-top: 1rem;
+    background: #ffffff;
+}
+
+.contact-section > div{
+    flex-direction: column;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.contact-section .contact-top{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.contact-section .contact-top h1{
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Space Grotesk';
+    font-size: 44px;
+    color: #282938;
+    text-transform: capitalize;
+    line-height: var(--line-height);
+}
+
+.contact-section .contact-top p{
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Bai Jamjuree';
+    font-size: 1rem;
+    color: #1C1E53;
+    line-height: var(--line-height);
+}
+
+.contact-section form{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    width: 100%;
+    /* grid-auto-flow: row; */
+    justify-items: center;
+    /* align-items: start; */
+
+}
+
+.contact-section form > div, .contact-section form > button{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+}
+
+.contact-section form > div:nth-child(1), .contact-section form > div:nth-child(2),  .contact-section form > div:nth-child(3),  .contact-section form > div:nth-child(4){
+    grid-column: span 1;
+}
+
+.contact-section form > div:nth-child(5), .contact-section form > div:nth-child(6),  .contact-section form > button{
+    grid-column: span 2;
+}
+
+.contact-section label{
+    color: #282938;
+    font-family: 'Bai Jamjuree';
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+.contact-section form input, .contact-section form textarea{
+    background: #ffffff;
+    color: #505050;
+    font-family: 'Bai Jamjuree';
+    font-weight: 400;
+    font-size: 1.25rem;
+    border: 1.33px solid #5E3BEE;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+    appearance: none;
+
+}
+
+/* .contact-section form input::placeholder, .contact-section form textarea::placeholder{
+
+} */
+
+.contact-section form select{
+    background: #ffffff;
+    color: #282938;
+    border: 1.33px solid #5E3BEE;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+}
+
+.contact-section form input:-webkit-autofill {
+    background-color: white !important; /* Reset background */
+    color: black !important; /* Reset text color */
+    -webkit-text-fill-color: black !important; /* Prevent autofill text color change */
+    box-shadow: 0 0 0px 1000px white inset !important; /* Force background override */
+    transition: background-color 0s, color 0s; /* Avoid flashing on autofill */
+  }
+  
+
+.contact-section form > button{
+    width: max-content;
+    max-width: 100%;
+    background: #5E3BEE;
+    font-family: 'Roboto';
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 2.5rem;
+}
+
+
+@media (max-width:1024px) and (min-width:768px) {
+    .contact-section form input, .contact-section form select option, .contact-section form textarea, .contact-section form label, .contact-section form > button{
+        font-size: 1rem;
+    }
+
+    .contact-section .contact-top h1{
+        font-size: 36px;
+    }
+
+}
+
+@media (max-width:768px) {
+    .contact-section form input, .contact-section form select, .contact-section form textarea, .contact-section form label, .contact-section form > button{
+        font-size: 0.875rem;
+    }
+
+    .contact-section .contact-top h1{
+        font-size: 28px;
+    }
+}
+
+@media (max-width:640px) {
+    .contact-section form input, .contact-section form select, .contact-section form textarea, .contact-section form > button{
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width:350px){
+    .contact-section form > div:nth-child(1), .contact-section form > div:nth-child(2),  .contact-section form > div:nth-child(3),  .contact-section form > div:nth-child(4){
+        grid-column: span 2;
+    }
+}
