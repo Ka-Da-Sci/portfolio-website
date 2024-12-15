@@ -1,6 +1,6 @@
 import { FC } from "react";
 import About from "../page-sections/homepage-sections/About";
-// import Contact from "../page-sections/homepage-sections/Contact";
+import Contact from "../page-sections/homepage-sections/Contact";
 import Testimonials from "../page-sections/homepage-sections/Testimonials";
 import classes from './Home.module.css';
 import Hero from "../page-sections/homepage-sections/Hero";
@@ -16,7 +16,7 @@ const Home: FC = () => {
             <About />
             <Portfolios />
             <Testimonials />
-            {/* <Contact /> */}
+            <Contact />
         </main>
     )
 }
