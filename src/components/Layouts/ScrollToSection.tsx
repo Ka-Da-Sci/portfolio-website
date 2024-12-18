@@ -3,28 +3,27 @@ import { useLocation } from "react-router-dom";
 
 const ScrollToSection: FC = () => {
   const { pathname } = useLocation();
-  const l = useLocation();
-  // console.log(l);
-  console.log(pathname);
 
   useEffect(() => {
     if (pathname) {
       const element = document.getElementById(pathname.replace("/", ""));
-      console.log(element);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+          window.scrollBy({
+            top: -50,
+            behavior: "smooth",
+          }),
+            5;
+        }, 700);
       } else {
         if (pathname === "/") {
           const defaultElement = document.querySelector("#hero");
-          console.log(l);
-          console.log(defaultElement);
           if (defaultElement) {
             defaultElement.scrollIntoView({ behavior: "smooth" });
           }
         }
       }
-    } else{
-      console.log('Rubbish');
     }
   });
 
