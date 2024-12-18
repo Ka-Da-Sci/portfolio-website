@@ -4,6 +4,7 @@ import { Fragment } from "react/jsx-runtime";
 import Home from "./pages/Home";
 import ScrollToSection from "./components/Layouts/ScrollToSection";
 // import classes from './App.module.css'
+import Footer from "./components/Layouts/Footer";
 
 const App = () => {
 
@@ -17,7 +18,9 @@ const App = () => {
         <Route path="/about-me" element={<Home />} />
         <Route path="/testimonials" element={<Home />} />
         <Route path="/contact" element={<Home />} />
+        <Route path="/skills" element={<Home />} />
       </Routes>
+      <Footer />
     </Fragment>
   );
 };

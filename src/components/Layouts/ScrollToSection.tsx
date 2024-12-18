@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 const ScrollToSection: FC = () => {
   const { pathname } = useLocation();
   const l = useLocation();
-  console.log(l);
+  // console.log(l);
   console.log(pathname);
 
   useEffect(() => {
@@ -23,8 +23,10 @@ const ScrollToSection: FC = () => {
           }
         }
       }
+    } else{
+      console.log('Rubbish');
     }
-  }, [pathname]);
+  });
 
   return null;
 };

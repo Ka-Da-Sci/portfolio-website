@@ -6,8 +6,6 @@
 .skills-section > div {
   flex-direction: column;
   gap: 1rem;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
 }
 
 .skills-section .skills-top {
