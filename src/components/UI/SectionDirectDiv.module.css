@@ -6,33 +6,3 @@
     padding:3rem 5%;
     width: 100%;
 }
-
-/* 
-.inner-main-flex-column{
-    flex-direction: column;
-}
-
-@media (max-width: 768px){
-    .inner {
-        padding: 1rem 3%;
-        gap: 1rem;
-    }
-
-    .inner-768-column-normal{
-        flex-direction: column;
-    }
-
-    .inner-768-column-reverse{
-        flex-direction: column-reverse;
-    }
-}
-
-@media (max-width: 640px){
-    .inner-640-column-normal{
-        flex-direction: column;
-    }
-
-    .inner-640-column-reverse{
-        flex-direction: column-reverse;
-    }
-} */
