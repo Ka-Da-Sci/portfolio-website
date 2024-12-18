@@ -30,7 +30,7 @@ const Skills = () => {
         }
     ]; 
     return (
-        <section className={classes['skills-section']}>
+        <section id='skills' className={classes['skills-section']}>
             <SectionDirectDiv>
                 <div className={classes['skills-top']}>
                     <h1>My Expertise</h1>
