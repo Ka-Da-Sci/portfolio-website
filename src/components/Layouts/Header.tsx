@@ -1,8 +1,11 @@
 import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo-trans.svg';
+import menuClose from '../../assets/images/icon-close-menu.svg';
+import MenuOpen from '../../assets/images/icon-menu.png';
 import classes from './Header.module.css';
 import Logo from './Logo';
+import ImageWrapper from '../UI/ImageWrapper';
 
 const Header: FC = () => {
 
@@ -31,6 +34,14 @@ const Header: FC = () => {
             </nav>
 
             <a className={classes['download-cv']} target='-blank' rel='noopener noreferrer' href="/Elem Prosper Kachi CV.pdf">Download CV</a>
+            <div className={classes['mobile-toggle']}>
+                <div className={classes['icon-menu']}>
+                    <ImageWrapper sourceUrl={MenuOpen} alternativeText={'menu-toggle-icon'}/>
+                </div>
+                <div className={classes['icon-close-menu']}>
+                    <ImageWrapper sourceUrl={menuClose} alternativeText={'menu-toggle-icon'}/>
+                </div>
+            </div>
         </div>
     );
 

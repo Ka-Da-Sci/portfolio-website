@@ -12,7 +12,7 @@ const Contact: FC = () => {
       <SectionDirectDiv>
         <div className={classes["contact-top"]}>
           <h1>Contact Me</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>Let's weave your dreams and ideas into reality.</p>
         </div>
         <Formik
           initialValues={{

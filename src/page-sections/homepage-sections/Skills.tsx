@@ -1,33 +1,60 @@
 import classes from './Skills.module.css';
 import SectionDirectDiv from '../../components/UI/SectionDirectDiv';
 import Skill from '../../components/Layouts/Skill';
-import skillImageOne from '../../assets/images/skill-1-img.png'
-import skillImageTwo from '../../assets/images/skill-2-img.png'
-import skillImageThree from '../../assets/images/skill-3-img.png'
+import responsiveDesign from '../../assets/images/responsive-websites.jpg';
+import jsFrameworks from '../../assets/images/frameworks.jpg';
+import apiIntegration from '../../assets/images/api-integration.jpg';
+import seoOptimization from '../../assets/images/seo.jpg';
+import webAnimation from '../../assets/images/animation.jpg';
+import versionControl from '../../assets/images/git-version-control.jpg';
+
 
 const Skills = () => {
     const skillsData = [
         {
-            pText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.',
-            h1Text: "Strategy & Direction",
-            imgSrc: skillImageOne,
-            altText: "Skill 1",
+            pText: 'Implementing websites that adapt seamlessly to any device size, ensuring optimal user experience across platforms.',
+            h1Text: "Responsive Design Implementation",
+            imgSrc: responsiveDesign,
+            altText: "responsive-design",
             
         },
 
         {
-            pText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.',
-            h1Text: "Branding & Logo",
-            imgSrc: skillImageTwo,
-            altText: "Skill 2",
+            pText: 'Proficient in frameworks like React and Angular for building dynamic, interactive web applications.',
+            h1Text: "JavaScript Frameworks",
+            imgSrc: jsFrameworks,
+            altText: "js-frameworks",
         },
 
         {
-            pText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.',
-            h1Text: "UI & UX Design",
-            imgSrc: skillImageThree,
-            altText: "Skill 3",
-        }
+            pText: 'Seamlessly integrating third-party services or backend data through APIs, enhancing functionality and data-driven user experiences.',
+            h1Text: "API Integration",
+            imgSrc: apiIntegration,
+            altText: "api-integration",
+        },
+
+        {
+            pText: 'Implementing frontend strategies that boost search engine visibility, like optimized meta tags, schema markup, and site structure.',
+            h1Text: "SEO Best Practices",
+            imgSrc: seoOptimization,
+            altText: "seo-optimization",
+        },
+        
+        {
+            pText: 'Creating engaging user experiences with animations using CSS transitions, keyframes, or libraries like GreenSock.',
+            h1Text: "Web Animations",
+            imgSrc: webAnimation,
+            altText: "web-animation",
+
+        },
+
+        {
+            pText: 'Managing code changes and collaboration through Git, ensuring smooth development workflows.',
+            h1Text: "Version Control with Git",
+            imgSrc: versionControl,
+            altText: "version-control",
+        },
+
     ]; 
     return (
         <section id='skills' className={classes['skills-section']}>

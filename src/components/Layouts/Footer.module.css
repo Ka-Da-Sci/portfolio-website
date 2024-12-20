@@ -88,6 +88,10 @@
         
     }
 
+    .footer-section .footer-top > a{
+        display: none;
+    }
+
     .footer-section .footer-top nav{
         transform: translateX(0);
         order: 3;

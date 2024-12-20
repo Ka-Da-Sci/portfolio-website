@@ -11,8 +11,8 @@ const Hero: FC = () => {
           <SectionDirectDiv>
             <div className={classes['text-div']}>
               <p>Hey, I am Katchie!</p>
-              <h1>I weave <span>seamless</span> websites with <span>dynamic</span> user experiences.</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+              <h1>Crafting web masterpieces for <span>seamless</span> <span>interactive </span> and <span>dynamic</span> user experiences.</h1>
+              <p>Let's transform your visions and ideas into vibrant, user-focused digital landscapes.</p>
               <Link to='/contact'>Get In Touch</Link>
             </div>
             <div className={classes['img-div']}>
