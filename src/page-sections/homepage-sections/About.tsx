@@ -14,15 +14,32 @@ const About: FC = () => {
         <div className={classes["text-div"]}>
           <h1>About Me</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-            varius faucibus massa sollicitudin amet augue. Nibh metus a semper
-            purus mauris duis. Lorem eu neque, tristique quis duis. Nibh
-            scelerisque ac adipiscing velit non nulla in amet pellentesque
+            I'm Katchie, a passionate web developer with a keen eye for design
+            and detail. My journey into web development was fueled by a
+            fascination with how designs and codes come together to create
+            seamless user experiences.
           </p>
+
           <p>
-            Sit turpis pretium eget maecenas. Vestibulum dolor mattis
-            consectetur eget commodo vitae. Amet pellentesque sit pulvinar lorem
-            mi a, euismod risus r.
+            I thrive on crafting websites that not only look fantastic but also
+            function impeccably, ensuring that every user interaction is
+            intuitive and engaging. My expertise spans across the latest web
+            technologies, from responsive design principles to advanced
+            JavaScript frameworks, allowing me to build dynamic, interactive web
+            applications that stand out in today's digital landscape.
+          </p>
+
+          <p>
+            Beyond coding, I'm always exploring new trends in web design,
+            accessibility standards, and SEO strategies to stay ahead in this
+            ever-evolving field. My goal is not just to meet expectations but to
+            exceed them, delivering projects that are not only successful but
+            also memorable.
+          </p>
+
+          <p>
+          I believe that every website has a story to tell: let's collaborate and bring your vision to life with a website that
+            not only performs but also tells your story effectively.
           </p>
         </div>
       </SectionDirectDiv>

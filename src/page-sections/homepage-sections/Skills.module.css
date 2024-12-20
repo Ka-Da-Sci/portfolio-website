@@ -3,7 +3,7 @@
   background: #ffffff;
 }
 
-.skills-section > div {
+.skills-section>div {
   flex-direction: column;
   gap: 1rem;
 }
@@ -36,9 +36,10 @@
 
 .skills-section .skills-bottom {
   align-self: flex-start;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   width: 100%;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -46,6 +47,14 @@
 @media (max-width: 1024px) {
   .skills-section .skills-top h1 {
     font-size: 36px;
+  }
+
+  .skills-section .skills-bottom {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .skills-section .skills-bottom>li h1 {
+    font-size: 20px;
   }
 }
 
@@ -55,32 +64,27 @@
     align-items: center;
   }
 
-  .skills-section .skills-bottom > li {
-    align-self: flex-start;
+  .skills-section .skills-bottom>li {
     padding: 0.5rem;
   }
 
-  .skills-section .skills-bottom > li > div {
+  /* .skills-section .skills-bottom>li>div {
     max-width: 65px;
     max-height: 65px;
-  }
+  } */
 
-  .skills-section .skills-bottom > li h1 {
-    font-size: 20px;
-  }
-
-  .skills-section .skills-bottom > li p {
+  .skills-section .skills-bottom>li p {
     font-size: 15px;
   }
 }
 
 @media (max-width: 640px) {
 
-  .skills-section .skills-bottom {
+  /* .skills-section .skills-bottom {
     flex-direction: column;
-  }
+  } */
 
-  .skills-section > div {
+  .skills-section>div {
     align-items: center;
   }
 
@@ -89,28 +93,35 @@
     align-items: center;
   }
 
-  .skills-section .skills-bottom > li {
+  /* .skills-section .skills-bottom>li {
     align-self: center;
-  }
+  } */
 
-  .skills-section .skills-top h1{
-        font-size: 28px;
-    }
+  .skills-section .skills-top h1 {
+    font-size: 28px;
+  }
 
   .skills-section .skills-top p,
   .skills-section .skills-top h1 {
     text-align: center;
   }
 
-  .skills-section .skills-bottom > li {
+
+  .skills-section .skills-bottom {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .skills-section .skills-bottom>li {
     align-items: center;
   }
 
-  .skills-section .skills-bottom > li h1 {
+  .skills-section .skills-bottom>li h1 {
     text-align: center;
+    font-size: 18px;
   }
 
-  .skills-section .skills-bottom > li p {
-    text-align: center;
+  .skills-section .skills-bottom>li p {
+    text-align: justify;
+    hyphens: auto;
   }
 }

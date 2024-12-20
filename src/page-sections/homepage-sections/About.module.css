@@ -21,7 +21,6 @@
     font-weight: 400;
     line-height: var(--line-height);
     text-align: left;
-    hyphens: auto;
     color: #1C1E53;
 }
 
@@ -71,10 +70,11 @@
     .about-section .text-div{
         align-items: center;
         margin-top: 2rem;
+        hyphens: auto;
     }
 
     .about-section .text-div p, .about-section .text-div h1{
-        text-align: center;
+        text-align: justify;
         align-self: center;
     }
 

@@ -3,7 +3,7 @@
 
 .hero-section{
     width: 100%;
-    padding-top: 10rem;
+    padding-top: 4rem;
     background: #F5FCFF;
 }
 
@@ -22,7 +22,7 @@
     font-weight: 600;
     line-height: var(--line-height);
     text-align: left;
-    hyphens: auto;
+    /* hyphens: auto; */
 }
 
 .text-div p:nth-child(1) {
@@ -113,9 +113,9 @@
 }
 
 @media (max-width: 768px) {
-    .hero-section{
+    /* .hero-section{
         padding-top: 7.25rem;
-    }
+    } */
 
     .hero-section > div {
         flex-direction: column-reverse;
@@ -133,9 +133,9 @@
 }
 
 @media (max-width: 640px){
-    .hero-section{
+    /* .hero-section{
         padding-top: 6.25rem;
-    }
+    } */
 
     .img-div::before{
         border-radius: 16px;
