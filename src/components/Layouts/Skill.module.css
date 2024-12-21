@@ -6,13 +6,13 @@
     width: auto;
     height: 100%;
     max-width: 100%;
-    padding: 2rem;
+    padding: 1.25rem;
     border-radius: 10px;
 }
 
 .skill .image-container{
     display: flex;
-    padding: 0.75rem;
+    /* padding: 0.75rem; */
     justify-content: center;
     width: auto;
     height: auto;
@@ -20,6 +20,10 @@
     max-height: 100%;
     box-shadow: 0px 0px 16px 0px #0000001A;
     background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.skill .image-container img{
     border-radius: 8px;
 }
 
