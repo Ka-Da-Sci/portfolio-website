@@ -6,3 +6,11 @@
     padding:3rem 5%;
     width: 100%;
 }
+
+
+@media (max-width: 768px){
+    .inner{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
