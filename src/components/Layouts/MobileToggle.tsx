@@ -14,9 +14,17 @@ const MobileToggle: FC<MobileToggleProps> = (props) => {
     useEffect(() => {
       const updateToggleState = () => {
         const width = window.innerWidth;
+        const navBarElements = document.querySelector("nav")?.querySelectorAll("a");
+
   
         if (width <= 640) {
           setToggleState(false);
+          setToggleState(false);
+          navBarElements?.forEach((element) => {
+              element.addEventListener("click", () => {
+                  setToggleState(false);
+              });
+          });
         } else {
           setToggleState(true);
         }
