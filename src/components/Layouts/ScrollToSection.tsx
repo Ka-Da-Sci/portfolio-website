@@ -17,7 +17,7 @@ const ScrollToSection: FC = () => {
             5;
         }, 700);
       } else {
-        if (pathname === "/") {
+        if (/^\/$/.test(pathname)) {
           const defaultElement = document.querySelector("#hero");
           if (defaultElement) {
             defaultElement.scrollIntoView({ behavior: "smooth" });
