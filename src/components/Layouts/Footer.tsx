@@ -74,15 +74,15 @@ const Footer: FC = () => {
 
         <div className={classes['footer-bottom']}>
           <nav className={classes.legalities}>
-            <Link to="/">
+            <Link to="/error404">
               <h1>Privacy Policy</h1>
             </Link>
 
-            <Link to="/skills">
+            <Link to="/error404">
               <h1>Terms of Service</h1>
             </Link>
 
-            <Link to="/portfolios">
+            <Link to="/error404">
               <h1>Cookies Settings</h1>
             </Link>
           </nav>
