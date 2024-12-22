@@ -16,11 +16,17 @@ const Header: FC = () => {
   useEffect(() => {
     const updateToggleMobile = () => {
       const width = window.innerWidth;
-      const navBar = document.getElementById("header");
-      console.log(navBar);
+      const navBarElements = document.querySelector("nav")?.querySelectorAll("a");
+
+      console.log(navBarElements);
 
       if (width <= 640) {
         setToggleMobile(false);
+        navBarElements?.forEach((element) => {
+            element.addEventListener("click", () => {
+                setToggleMobile(false);
+            });
+        });
       } else {
         setToggleMobile(true);
       }
