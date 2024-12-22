@@ -1,23 +1,26 @@
-import { FC, useEffect, useState } from "react";
+import useCarouselContentsAdjuster from "../../custom-hooks/useCarouselContentsAdjuster";
+import { useRef, FC } from "react";
 import SectionDirectDiv from "../../components/UI/SectionDirectDiv";
 import classes from "./Testimonials.module.css";
 import Testimonial from "../../components/Layouts/Testimonial";
 import clientPhoto1 from "../../assets/images/client-1.png";
+import ImageWrapper from "../../components/UI/ImageWrapper";
+import carouselDirectionImage from "../../assets/images/carousel-direction.png";
 
 const DUMMYTESTIMONIALS = [
   {
     pText:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra.",
     clientPhoto: clientPhoto1,
-    clientName: "Dianne Russell",
-    clientCName: "Starbucks",
+    clientName: "Goodluck Efe",
+    clientCName: "Wivali AI",
   },
   {
     pText:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra.",
     clientPhoto: clientPhoto1,
-    clientName: "Dianne Russell",
-    clientCName: "Starbucks",
+    clientName: "Donard Smith",
+    clientCName: "Xalphabet",
   },
   {
     pText:
@@ -29,29 +32,51 @@ const DUMMYTESTIMONIALS = [
 ];
 
 const Testimonials: FC = () => {
-  // const [testimonialsData, setTestimonialsData] = useState(DUMMYTESTIMONIALS);
-  const [count, setCount] = useState(0);
+  const initialData = DUMMYTESTIMONIALS;
+  const initialCount = 3;
+  const { data, count, carouselCtrl } = useCarouselContentsAdjuster(
+    initialData,
+    initialCount
+  );
 
-  useEffect(() => {
-    const updateCount = () => {
-      const width = window.innerWidth;
+  const carouselLeftBtn = useRef<HTMLSpanElement | null>(null);
+  const carouselRightBtn = useRef<HTMLSpanElement | null>(null);
 
-      if (width <= 640) setCount(1);
-      else if (width <=1024) setCount(2);
-      else setCount(3);
-    };
-
-    updateCount();
-    window.addEventListener("resize", updateCount);
-    return () => window.removeEventListener("resize", updateCount);
-  }, []);
+  const handleLeftCarouselBtnClick = () => {
+    carouselCtrl(carouselLeftBtn.current!.id);
+  };
+  const handleRightCarouselBtnClick = () => {
+    carouselCtrl(carouselRightBtn.current!.id);
+  };
 
   return (
     <section className={classes['testimonials-section']} id="testimonials">
       <SectionDirectDiv>
         <h1>Clients Feedback</h1>
         <div>
-          {DUMMYTESTIMONIALS.slice(0, count).map((testimonial) => (<Testimonial clientReviewTXT={testimonial.pText} clientPhotoUrl={testimonial.clientPhoto} clientName={testimonial.clientName} clientCompanyName={testimonial.clientCName} key={Math.random()} />))}
+          {data.slice(0, count).map((testimonial) => (<Testimonial clientReviewTXT={testimonial.pText} clientPhotoUrl={testimonial.clientPhoto} clientName={testimonial.clientName} clientCompanyName={testimonial.clientCName} key={Math.random()} />))}
+        </div>
+        <div className={classes["testimonials-bottom"]}>
+          <span
+            ref={carouselLeftBtn}
+            onClick={handleLeftCarouselBtnClick}
+            id="leftCarouselBtn"
+          >
+            <ImageWrapper
+              sourceUrl={carouselDirectionImage}
+              alternativeText={"left direction"}
+            />
+          </span>
+          <span
+            ref={carouselRightBtn}
+            onClick={handleRightCarouselBtnClick}
+            id="rightCarouselBtn"
+          >
+            <ImageWrapper
+              sourceUrl={carouselDirectionImage}
+              alternativeText={"right direction"}
+            />
+          </span>
         </div>
       </SectionDirectDiv>
     </section>
