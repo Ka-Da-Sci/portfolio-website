@@ -1,25 +1,25 @@
-.testimonials-section{
+.testimonials-section {
     width: 100%;
     max-width: 100%;
     background: #F5FCFF;
 }
 
-.testimonials-section > div {
-    display: flex;
+.testimonials-section>div {
+    /* display: flex; */
     flex-direction: column;
     width: 100%;
 }
 
-.testimonials-section > div > h1{
+.testimonials-section>div>h1 {
     font-family: "Space Grotesk";
     font-size: 40px;
     font-weight: 700;
     line-height: var(--line-height);
-    text-align: left;  
-    color: #282938;  
+    text-align: left;
+    color: #282938;
 }
 
-.testimonials-section > div > div {
+.testimonials-section>div>div {
     display: flex;
     width: 100%;
     gap: 1.5rem;
@@ -27,27 +27,70 @@
     align-items: center;
 }
 
-.testimonials-section > div > div > div {
+.testimonials-section>div>div>div {
     width: 100%;
     height: 100%;
     max-width: 491.56px;
     max-height: 398.52px;
 }
 
-@media (max-width: 1024px) {
-    .testimonials-section > div > h1 {
-      font-size: 36px;
-      text-align: center;
-    }
-  }
 
-@media (max-width: 640px){
-    .testimonials-section > div > h1 {
+.testimonials-section .testimonials-bottom {
+    display: none;
+    gap: 1rem;
+    justify-content: center;
+    align-self: self-end;
+    margin-top: -1rem;
+    width: max-content;
+    max-width: 100%;
+}
+
+.testimonials-section .testimonials-bottom img {
+    width: 30.63px;
+    height: 30.39px;
+    max-width: 30.63px;
+    max-height: 30.39px;
+    cursor: pointer;
+
+}
+
+.testimonials-section .testimonials-bottom span:nth-of-type(2) img {
+    transform: scale(-1);
+}
+
+@media (max-width: 1024px) {
+    .testimonials-section>div>h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .testimonials-section .testimonials-bottom {
+        /* align-self: center; */
+        display: flex;
+    }
+
+}
+
+@media (max-width: 640px) {
+    .testimonials-section>div>h1 {
         font-size: 28px;
     }
 
-    .testimonials-section > div {
+    .testimonials-section>div {
         align-items: center;
-    }    
+    }
 
-  }
+    .testimonials-section>div>div>div {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .testimonials-section .testimonials-bottom img {
+        height: 25px;
+        width: 25px;
+    }
+
+}

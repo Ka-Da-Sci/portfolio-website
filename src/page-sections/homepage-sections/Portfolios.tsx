@@ -6,9 +6,17 @@ import portfolioImageTwo from "../../assets/images/portfolio-2.png";
 import portfolioImageThree from "../../assets/images/portfolio-3.png";
 import ImageWrapper from "../../components/UI/ImageWrapper";
 import carouselDirectionImage from "../../assets/images/carousel-direction.png";
-import {useEffect, useRef, useState } from "react";
+import useCarouselContentsAdjuster from "../../custom-hooks/useCarouselContentsAdjuster";
+import { useRef } from "react";
 
-const dummyPortfoliosData = [
+interface PortfolioData {
+  pText: string;
+  h1Text: string;
+  imgSrc: string;
+  altText: string;
+}
+
+const dummyPortfoliosData: PortfolioData[] = [
   {
     pText:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
@@ -104,51 +112,22 @@ const dummyPortfoliosData = [
 ];
 
 const Portfolios = () => {
-  const [portfoliosData, setPortfoliosData] = useState(dummyPortfoliosData)
-  const [count, setCount] = useState(0);
+  const initialData = dummyPortfoliosData;
+  const initialCount = 3;
+  const { data, count, carouselCtrl } = useCarouselContentsAdjuster(
+    initialData,
+    initialCount
+  );
+
   const carouselLeftBtn = useRef<HTMLSpanElement | null>(null);
   const carouselRightBtn = useRef<HTMLSpanElement | null>(null);
 
   const handleLeftCarouselBtnClick = () => {
     carouselCtrl(carouselLeftBtn.current!.id);
-  }
+  };
   const handleRightCarouselBtnClick = () => {
     carouselCtrl(carouselRightBtn.current!.id);
-  }
-  const carouselCtrl = (btnId: string) => {
-    console.log(btnId);
-    setPortfoliosData((prevState) => {
-      if (prevState.length === 0) return prevState; // Return unchanged state if empty
-  
-      if (btnId === 'leftCarouselBtn') {
-        // Move the last project to the start
-        const lastProject = prevState[prevState.length - 1];
-        const restProjects = prevState.slice(0, -1);
-        return [lastProject, ...restProjects];
-      } else if (btnId === 'rightCarouselBtn') {
-        // Move the first project to the end
-        const firstProject = prevState[0];
-        const restProjects = prevState.slice(1);
-        return [...restProjects, firstProject];
-      }
-  
-      return prevState; // Fallback in case of no matching id
-    });
-  };  
-
-  useEffect(() => {
-    const updateCount = () => {
-      const width = window.innerWidth;
-
-      if (width <= 640) setCount(1);
-      else if (width <=768) setCount(2);
-      else setCount(3);
-    };
-
-    updateCount();
-    window.addEventListener("resize", updateCount);
-    return () => window.removeEventListener("resize", updateCount);
-  }, []);
+  };
 
   return (
     <section id="portfolios" className={classes["portfolios-section"]}>
@@ -157,25 +136,32 @@ const Portfolios = () => {
           <h1>My Portfolio</h1>
         </div>
         <ul className={classes["portfolios-middle"]}>
-          {portfoliosData.slice(0, count).map((portfolio) => (
+          {data.slice(0, count).map((portfolio) => (
             <Portfolio key={Math.random()} {...portfolio} />
           ))}
         </ul>
         <div className={classes["portfolios-bottom"]}>
-            <span ref={carouselLeftBtn} onClick={handleLeftCarouselBtnClick} id="leftCarouselBtn">
-              <ImageWrapper
-                
-                sourceUrl={carouselDirectionImage}
-                alternativeText={"left direction"}
-              />
-            </span>
-            <span ref={carouselRightBtn} onClick={handleRightCarouselBtnClick} id="rightCarouselBtn">
-              <ImageWrapper
-                sourceUrl={carouselDirectionImage}
-                alternativeText={"right direction"}
-              />
-            </span>
-          </div>
+          <span
+            ref={carouselLeftBtn}
+            onClick={handleLeftCarouselBtnClick}
+            id="leftCarouselBtn"
+          >
+            <ImageWrapper
+              sourceUrl={carouselDirectionImage}
+              alternativeText={"left direction"}
+            />
+          </span>
+          <span
+            ref={carouselRightBtn}
+            onClick={handleRightCarouselBtnClick}
+            id="rightCarouselBtn"
+          >
+            <ImageWrapper
+              sourceUrl={carouselDirectionImage}
+              alternativeText={"right direction"}
+            />
+          </span>
+        </div>
       </SectionDirectDiv>
     </section>
   );
