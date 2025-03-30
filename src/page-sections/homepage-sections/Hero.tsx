@@ -2,7 +2,7 @@ import { FC} from "react";
 import { Link } from "react-router-dom";
 import SectionDirectDiv from "../../components/UI/SectionDirectDiv";
 import ImageWrapper from "../../components/UI/ImageWrapper";
-import photo from '../../assets/images/profile-photo.png';
+import photo from '../../assets/images/elem-prosper-kachi-passport-photo.png';
 import classes from './Hero.module.css';
 
 const Hero: FC = () => {

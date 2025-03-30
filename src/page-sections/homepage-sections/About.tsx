@@ -1,7 +1,7 @@
 import { FC } from "react";
 import SectionDirectDiv from "../../components/UI/SectionDirectDiv";
 import ImageWrapper from "../../components/UI/ImageWrapper";
-import photo from "../../assets/images/masked-photo.png";
+import photo from "../../assets/images/elem-prosper-kachi-passport-photo3.png";
 import classes from "./About.module.css";
 
 const About: FC = () => {

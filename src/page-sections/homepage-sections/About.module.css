@@ -4,6 +4,8 @@
 .about-section{
     width: 100%;
     background: #ffffff;
+    overflow: hidden;
+    max-height: 592px;
 }
 
 .about-section .text-div{
@@ -40,13 +42,14 @@
 
 .about-section .img-div {
     position: relative;
+    overflow: hidden;
     align-self: flex-start;
     display: flex;
     justify-content: center;
     height: auto;
     width: auto;
     max-width: 592px;
-    max-height: 576px;
+    max-height: 100%;
     padding: 0 1rem;
     flex: 1;
 }
