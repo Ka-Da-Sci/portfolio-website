@@ -8,8 +8,10 @@ const About: FC = () => {
   return (
     <section id="about-me" className={classes[`about-section`]}>
       <SectionDirectDiv>
-        <div className={classes["img-div"]}>
-          <ImageWrapper sourceUrl={photo} alternativeText={"photo"} />
+        <div className={classes["main-img-div-wrapper"]}>
+          <div className={classes["img-div"]}>
+            <ImageWrapper sourceUrl={photo} alternativeText={"photo"} />
+          </div>
         </div>
         <div className={classes["text-div"]}>
           <h1>About Me</h1>
@@ -38,8 +40,9 @@ const About: FC = () => {
           </p>
 
           <p>
-          I believe that every website has a story to tell: let's collaborate and bring your vision to life with a website that
-            not only performs but also tells your story effectively.
+            I believe that every website has a story to tell: let's collaborate
+            and bring your vision to life with a website that not only performs
+            but also tells your story effectively.
           </p>
         </div>
       </SectionDirectDiv>
