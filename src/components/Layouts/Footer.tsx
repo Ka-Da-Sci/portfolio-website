@@ -5,7 +5,7 @@ import classes from "./Footer.module.css";
 import Logo from "./Logo";
 import githubLogo from "../../assets/images/github.jpg";
 import xLogo from "../../assets/images/twitter.svg";
-import linkedInLogo from "../../assets/images/linkedin.svg";
+import linkedInLogo from "../../assets/images/linkedIn.svg";
 import instagramLogo from "../../assets/images/instagram.svg";
 import whatsappLogo from "../../assets/images/whatsapp.jpg";
 import ImageWrapper from "../UI/ImageWrapper";
